@@ -1,15 +1,11 @@
 <script setup>
+  import NavbarView from './views/NavbarView.vue';
+
 </script>
 
 <template>
   <header>
-    <div class="logo">
-      <img src="./assets/logo.svg" alt="Logo" width="40px">
-    </div>
-
-    <button class="theme-toggle-button">
-      <i class="pi pi-moon"></i>
-    </button>
+    <NavbarView />
   </header>
 
   <main>
