@@ -4,7 +4,9 @@
   <div class="header-wrapper">
     <div class="logo">
       <img src="../assets/logo.svg" alt="Logo" width="40px">
+      <h1 class="app-name">Characte Counter</h1>
     </div>
+
 
     <button class="theme-toggle-button">
       <i class="pi pi-sun"></i>
@@ -20,6 +22,15 @@
     align-items: center;
     justify-content: space-between;
     padding: var(--section-padding);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .app-name {
+    font-weight: 600;
   }
 
   .theme-toggle-button{

@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <h3>Letter Density</h3>
+  <h2>Letter Density</h2>
   <div>
     Not characters found. Start typing to see letter density.
   </div>
