@@ -1,19 +1,35 @@
-<script setup></script>
+<script setup>
+
+  const props = defineProps({
+    character:{
+      type: Number,
+      default:0
+    },
+    words:{
+      type: Number,
+      default:0
+    },
+    sentence:{
+      type: Number,
+      default:0
+    }
+  })
+</script>
 
 <template>
   <div class="counters">
     <div class="counter-item item--primary">
-      <p class="counter-value">0</p>
+      <p class="counter-value">{{ character }}</p>
       <p class="counter-title">Total Characters</p>
     </div>
 
     <div class="counter-item item--accent1">
-      <p class="counter-value">0</p>
+      <p class="counter-value">{{ words }}</p>
       <p class="counter-title">Words Count</p>
     </div>
 
     <div class="counter-item item--accent2">
-      <p class="counter-value">0</p>
+      <p class="counter-value">{{ sentence }}</p>
       <p class="counter-title">Sentence Count</p>
     </div>
   </div>

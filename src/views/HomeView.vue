@@ -1,9 +1,23 @@
 <script setup>
+  import { ref } from 'vue';
   import InputMain from '@/components/InputMain.vue';
   import Counters from '@/components/Counters.vue';
   import LetterDensity from '@/components/LetterDensity.vue';
 
-  InputMain
+  import { calculateCharacters, calculateWords, calculateSentence } from '@/utils/counter';
+
+  const characters = ref(0);
+  const words = ref(0);
+  const sentence = ref(0);
+
+  const calculate = (str, encludeSpaces) => {
+    characters.value = calculateCharacters(str, encludeSpaces)
+    words.value = calculateWords(str)
+    sentence.value = calculateSentence(str)
+  }
+
+  
+  
 </script>
 
 <template>
@@ -16,12 +30,15 @@
   
     <section class="">
      
-      <input-main />
+      <input-main 
+        @on-text-change="(str, encludeSpaces) => calculate(str, encludeSpaces)"
+        @on-enclode-spaces-checkbox-change="(str, encludeSpaces) => calculate(str, encludeSpaces)"
+      />
   
     </section>
   
     <section class="">
-      <counters />
+      <counters :character="characters" :words="words" :sentence="sentence"/>
     </section>
   
     <section>
