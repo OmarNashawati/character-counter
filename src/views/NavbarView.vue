@@ -14,7 +14,7 @@
 
 <style scoped>
   .header-wrapper {
-    max-width: 960px;
+    max-width: var(--max-width);
     margin: 0 auto;
     display: flex;
     align-items: center;

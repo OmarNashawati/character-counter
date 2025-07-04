@@ -23,6 +23,7 @@
   --text-dark: var(--gray-50);
 
   --section-padding: 0.8rem 2rem;
+  --max-width: 960px;
   
 }
 
