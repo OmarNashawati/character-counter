@@ -16,6 +16,21 @@
     sentence.value = calculateSentence(str)
   }
 
+
+  const densityList = [
+    {
+      letter:'N',
+      value:10
+    },
+    {
+      letter:'L',
+      value:15
+    },
+    {
+      letter:'M',
+      value:20
+    }
+  ]
   
   
 </script>
@@ -42,7 +57,7 @@
     </section>
   
     <section>
-      <letter-density />
+      <letter-density :density-list="densityList"/>
     </section>
   </div>
 </template>
